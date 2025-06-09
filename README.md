@@ -19,6 +19,8 @@ Made by [Nicky Case](https://ncase.me) in collaboration with teens @ [Hack Club]
 * [Markdown-it Footnotes](https://github.com/markdown-it/markdown-it-footnote) for the feetnotes
 * [HTML DOM Parser](https://www.npmjs.com/package/html-dom-parser) so I can manipulate DOM stuff in my Node build script
 
+[teste](https://miguelvieira-pixel.github.io/ai-safety-dance-brazilian-portuguese/) 
+
 **Fonts:**
 
 * [Merriweather](https://fonts.google.com/specimen/Merriweather) (Serif)
