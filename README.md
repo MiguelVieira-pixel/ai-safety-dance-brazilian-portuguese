@@ -26,4 +26,6 @@ Made by [Nicky Case](https://ncase.me) in collaboration with teens @ [Hack Club]
 
 The favicon is a mashup of 🤖 and 😱, from Google's Gboard's Emoji Kitchen. [Google's emoji font](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) is open source (Open Font License). I couldn't find any specific license for their emoji _mashups_ but I'm gonna hope it's fine. I shall wait here until Google's lawyers come get me.
 
-O site em português ficará aqui [site](https://miguelvieira-pixel.github.io/ai-safety-dance-brazilian-portuguese/)
+**Translations**
+
+[potuguês(BR)](https://miguelvieira-pixel.github.io/ai-safety-dance-brazilian-portuguese/)
