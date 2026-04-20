@@ -42,6 +42,7 @@
     <script src="scripts/nutshell-v1.0.5.js"></script>
     <script> Nutshell.setOptions({ startOnLoad: false, /* Start AFTER footnotes loaded */ }); </script>
     <!-- MathJAX: for nice math -->
+    
     <script src="scripts/tex-mml-chtml.js"></script>
 	<!-- This website's own scripts -->
     <script src="scripts/page.js"></script>
@@ -121,6 +122,7 @@
 
             
             
+            
 
             <div id="crt_lines"></div>
             <div id="static"></div>
@@ -183,10 +185,9 @@
                     </span>
                 </div>
             </a>
-            <a target="_self" href="#"
-                title="CHEGARÁ NO FINAL DE NOVEMBRO DE 2025, provavelmente"
-                onclick="alert('CHEGARÁ NO FINAL DE NOVEMBRO DE 2025, provavelmente')">
-                <div>
+            <a target="_self" href="p3"
+                class="live">
+                <div  >
                     <span class='chapter-nav-desktop'>
                         part 3<br>soluções?
                     </span>
@@ -195,9 +196,8 @@
                     </span>
                 </div>
             </a>
-            <a target="_self" href="#"
-                title="CHEGARÁ NO FINAL DE NOVEMBRO DE 2025, provavelmente"
-                onclick="alert('CHEGARÁ NO FINAL DE NOVEMBRO DE 2025, provavelmente')">
+            <a target="_self" href="conclusion"
+                class="live">
                 <div style="border-right:1px solid rgba(128,128,128,0.8);">
                     <span class='chapter-nav-desktop'>
                         conclusão
@@ -236,13 +236,13 @@
     <!-- BEHOLD! CONTENT!!!!! -->
 	<article id="content">
 <p><strong>O debate sobre a IA é, na verdade, 100 debates usando um único disfarce.</strong></p>
-<p> A inteligência artificial (IA) poderá nos ajudar a curar todas as doenças, e contruir um mundo pós-escassez cheio de vidas prósperas? Ou ajudará tiranos a nos vigiar e manipular ainda mais? Os principais riscos da IA são de acidentes, do uso indevido de pessoas com más intenções, ou de uma IA rebelde <em>se voltar</em> contra nós? Isso tudo é só hype? Por que a IA consegue imitar o estilo de qualquer artista em um minuto, mas fica confusa ao desenhar mais de 3 objetos? Por que é tão difícil fazer com que uma IA sirva de forma confiável aos valores de humanidade, ou servir a <em>qualquer</em> objetivo? E se ela aprender a ser <em>mais</em> humana que nós? E se ela incorporar a <em>desumanidade</em> dos humanos, nossos preconceitos e crueldade? Estamos indo rumo a uma utopia, uma distopia, à extinção, talvez um destino <em>pior</em> que a própria extinção, ou — o desfecho mais chocante de todos — <em>nada muda?</em> E ainda: A IA vai roubar o meu emprego?</p>
+<p> A inteligência artificial (IA) poderá nos ajudar a curar todas as doenças, e contruir um mundo pós-escassez cheio de vidas prósperas? Ou ajudará tiranos a nos vigiar e manipular ainda mais? Os principais riscos da IA são de acidentes, do uso indevido de pessoas com más intenções, ou de uma IA rebelde <em>se voltar</em> contra nós? Isso tudo é só hype? Por que a IA consegue imitar o estilo de qualquer artista em um minuto, mas fica confusa ao desenhar mais de 4 objetos? Por que é tão difícil fazer com que uma IA sirva de forma confiável aos valores de humanidade, ou servir a <em>qualquer</em> objetivo? E se ela aprender a ser <em>mais</em> humana que nós? E se ela incorporar a <em>desumanidade</em> dos humanos, nossos preconceitos e crueldade? Estamos indo rumo a uma utopia, uma distopia, à extinção, talvez um destino <em>pior</em> que a própria extinção, ou — o desfecho mais chocante de todos — <em>nada muda?</em> E ainda: A IA vai roubar o meu emprego?</p>
 <p>...e muito mais dúvidas.</p>
 <p>Infelizmente, para entender a IA com um pouco mais de nuance, nós precisamos entender alguns detalhes técnicos...só que esses detalhes estão espalhados por centenas de artigos, enterrados a dois metros de profundidade por um monte de palavreado técnico.</p>
 <p>Então, eu apresento a vocês:</p>
 <p><img src="media/intro/confetti.png" alt="RCM (Robot Catboy Maid) throwing confetti under a banner that reads: A Whirlwood Tour Guide to AI Safety for Us Warm, Normal Fleshy Humans."></p>
 <p><strong>Esta série de 3 partes é o seu guia para entender as ideias principais de IA &amp; Segurança de IA*(AI Safety) —  explicadas de forma amigável, acessível, e com uma pitada de opinião! </strong></p>
-<p>(* Frases relacionadas: Riscos de IA(AI Risk), Riscos existenciais de IA(AI X-Risk), Alinhamento de IA(AI Alignment), Ética de IA(AI Ethics), o "Não-Deixe-IA-Matar-Todo-mundo-ismo". Não tem <em>nenhum</em> consenso sobre o  que essas expressões significam, então estou usando &quot;Segurança de IA&quot; como termo geral.)</p>
+<p>(* Frases relacionadas:Segurança de IA(AI Safety), Riscos de IA(AI Risk), Riscos existenciais de IA(AI X-Risk), Alinhamento de IA(AI Alignment), Ética de IA(AI Ethics), o "Não-Deixe-IA-Matar-Todo-mundo-ismo". Não tem <em>nenhum</em> consenso sobre o  que essas expressões significam, então estou usando &quot;Segurança de IA&quot; como termo geral.)</p>
 <p>Esta série terá quadrinhos estrelando IAra a CrIAda-Cyborgato, como esse:</p>
 <p><img src="media/intro/Outer_Alignment.png" alt="Comic. Ham the Human tells RCM (Robot Catboy Maid) to &quot;keep this hosue clean&quot;. RCM reasons: What causes the mess? The humans cause the mess! Therefore: GET RID OF THE HUMANS. RCM then yeets Ham out of the house."></p>
 <p><code>[voz-guia-turística]</code> À sua direita 👉, você irá ver botões para <img src="media/intro/icon1.png" class="inline-icon"/> ver os índices, <img src="media/intro/icon2.png" class="inline-icon"/> mudar o visual da página, e <img src="media/intro/icon3.png" class="inline-icon"/> um réloginho para olhar o tempo de leitura restante.</p>
@@ -264,7 +264,7 @@
 <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
 <p>(Questão de segurança: Sem intuição, a IA não consegue entender o senso comum nem valores humanos. Assim, a IA pode atingir seus objetivos de maneira logicamente corretas, mas indesejáveis.)</p>
 <p><strong>Depois de 2000: A IA passou a ter &quot;intuição&quot;, mas a ser péssima em lógica.</strong></p>
-<p>É por isso que as IAs generativas (<em>no momento que estou escrevendo, (Maio 2024</em>) podem criar paisagens inteiras no estilo de qualquer artista... <a href="#FourObjects">:mas ficam confusas ao desenhar mais de 3 objetos</a>. <em>(👈 clique neste texto! ele também se expande!)</em></p>
+<p>É por isso que as IAs generativas (<em>no momento que estou escrevendo, (Maio 2024</em>) podem criar paisagens inteiras no estilo de qualquer artista... <a href="#FourObjects">:mas ficam confusas ao desenhar mais de 4 objetos</a>. <em>(👈 clique neste texto! ele também se expande!)</em></p>
 <p>(Questão de segurança: Sem lógica, não conseguimos verificar o que está acontecendo na &quot;intuição&quot; de uma IA. Essa intuição pode ser tendenciosa, conter erros sutis mas perigosos, ou falhar de forma bizarra em novos cenários.)</p>
 <p><strong>Atualmente: <em>Ainda</em> não sabemos como unificar lógica &amp; intuição na IA.</strong></p>
 <p>Mas, se ou quando isso acontecer, <em>teremos</em> os maiores riscos &amp; recompensas da IA: algo capaz de planejar logicamente melhor do que nós, <em>e</em> de aprender uma intuição geral. Seria uma &quot;IA Einstein&quot;... ou uma &quot;IA Oppenheimer&quot;.</p>
@@ -375,38 +375,39 @@
 <p>Portanto, se você me permitir uma lista com os &quot;Top 5&quot;...</p>
 <h3>1) Não, Segurança de IA não é uma preocupação marginal dos fanáticos por ficção científica.</h3>
 <p><img src="media/intro/crazy.png" alt="RCM in front of a &quot;crazy board&quot; with red thread, thumbtacks, and papers with AI jargon."></p>
-<p>Segurança de IA / Risco em IA[AI Risk] costumavam ser menos populares, mas agora, em 2024, os governos dos EUA &amp; Reino Unido possuem departamentos específicos para Segurança de IA!<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup> Isso resultou em muitos <em>dos</em> principais pesquisadores de IA começarem a soar o alarme sobre o tema. Entre eles estão:</p>
+<p>Segurança de IA / Risco em IA[AI Risk] costumavam ser menos populares, mas agora, em 2024, os governos dos EUA &amp; Reino Unido possuem departamentos específicos para Segurança de IA<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>, and the US, EU &amp; China have reached agreements on AI Safety research.<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> Isso resultou em muitos <em>dos</em> principais pesquisadores de IA começarem a soar o alarme sobre o tema. Entre eles estão:</p>
 <ul>
-<li>Geoffrey Hinton<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> e Yoshua Bengio<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>, co-vencedores do Prêmio Turing de 2018(o &quot;Prêmio Nobel da computação&quot;) por seu trabalho em rede neurais profundas, a tecnologia que <em>todas</em> as novas e famosas IAs usam.<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup></li>
-<li>Stuart Russell e Peter Norvig, autores do <em>livro didático</em> mais utilizado sobre Inteligência Artificial.<sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup></li>
-<li>Paul Christiano, pioneiro da técnica de treinamento/segurança de IA que tornou o ChatGPT possível.<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup></li>
+<li>Geoffrey Hinton<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup> e Yoshua Bengio<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup>, co-vencedores do Prêmio Turing de 2018(o &quot;Prêmio Nobel da computação&quot;) por seu trabalho em rede neurais profundas, a tecnologia que <em>todas</em> as novas e famosas IAs usam.<sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup></li>
+<li>Stuart Russell e Peter Norvig, autores do <em>livro didático</em> mais utilizado sobre Inteligência Artificial.<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup></li>
+<li>Paul Christiano, pioneiro da técnica de treinamento/segurança de IA que tornou o ChatGPT possível.<sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup></li>
 </ul>
-<p>(Para que fique claro: Também <em>há</em> pesquisadores importantes de IA que se <em>opõem</em> ao medo do Risco em IA, como Yann LeCun,<sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup>  co-vencedor do Prêmio Turing de 2018, e pesquisador-chefe de IA do <s>Facebook</s> Meta. Outro nome a ser destacado é Melanie Mitchell<sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup>, pesquisadora em IA &amp; ciência da complexidade.)</p>
+<p>(Para que fique claro: Também <em>há</em> pesquisadores importantes de IA que se <em>opõem</em> ao medo do Risco em IA, como Yann LeCun,<sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup>  co-vencedor do Prêmio Turing de 2018, e pesquisador-chefe de IA do <s>Facebook</s> Meta. Outro nome a ser destacado é Melanie Mitchell<sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup>, pesquisadora em IA &amp; ciência da complexidade.)</p>
 <p>Estou ciente de que &quot;olhe para esses especialistas&quot; é um apelo à autoridade, mas isso é <em>apenas</em> para refutar a ideia de que &quot;eh, só os fãs de ficção científica temem os Riscos em IA&quot;. Mas no fim das contas, apelar para a autoridade/nerds não é suficiente; tem que <em>realmente entender a coisa toda</em>. (Assim como <em>você</em> está fazendo, ao ler isto! Então, obrigado.)</p>
 <p>Mas, falando em fãs de ficção científica...</p>
 <h3>2) Não, Risco em IA <em>NÃO</em> é sobre a IA se tornar &quot;senciente&quot; ou &quot;consciente&quot; ou ganhar uma &quot;vontade de poder&quot;.</h3>
 <p>Sci-fi authors write sentient AIs because they're writing <em>stories</em>, not technical papers. The philosophical debate on artificial consciousness is fascinating, <em>and irrelevant to AI Safety.</em> Analogy: a nuclear bomb isn't conscious, but it can still be unsafe, no?</p>
 <p><img src="media/intro/conscious.png" alt="Left: drawing of a nuke, captioned &quot;not conscious&quot;. Right: drawing of Professor Nuke giving a lecture titled, &quot;Why Murder is Good, Actually.&quot; Captioned, &quot;conscious&quot;."></p>
 <p>As mentioned earlier, the real problems in AI Safety are &quot;boring&quot;: an AI learns the wrong things from its biased training data, it breaks in slightly-new scenarios, it logically accomplishes goals in undesired ways, etc.</p>
-<p>But, &quot;boring&quot; doesn't mean <em>not important</em>. The technical details of how to design a safe elevator/airplane/bridge are boring to most laypeople... <em>and also</em> a matter of life-and-death.</p>
-<p>(Catastrophic AI Risk doesn't even require &quot;super-human general intelligence&quot;! For example, an AI that's &quot;only&quot; good at designing viruses could help a bio-terrorist organization (like Aum Shinrikyo<sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup>) kill millions of people.)</p>
-<p>But speaking of killing people...</p>
+<p>But, &quot;boring&quot; doesn't mean <em>not important</em>. The technical details of how to design a safe elevator/airplane/bridge are boring to most laypeople... <em>and also</em> a matter of life-and-death. Catastrophic AI Risk doesn't even require &quot;super-human general intelligence&quot;! For example, an AI that's &quot;only&quot; good at designing viruses could help a bio-terrorist organization (like Aum Shinrikyo<sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup>) kill millions of people.</p>
+<p>(<strong>update dec 2025:</strong> while AI Consciousness is still perpendicular to AI Safety, in the 1.5 years between when I started this series and now, concern for the welfare <em>of the AIs themselves</em> has become a bit more mainstream. Not, like, <em>mainstream</em> mainstream, but one of the leading AI labs, Anthropic, recently hired <a href="https://arstechnica.com/ai/2024/11/anthropic-hires-its-first-ai-welfare-researcher/">a full-time &quot;AI Welfare&quot; researcher</a>, whose work has led to <a href="https://www.anthropic.com/research/end-subset-conversations">actual changes to the product</a>.)</p>
+<p>But anyway! Speaking of killing people...</p>
 <h3>3) No, AI Risk isn't <em>necessarily</em> extinction, SkyNet, or nanobots</h3>
 <p><img src="media/intro/omnicide.png" alt="A drawing of Microsoft Clippy saying: &quot;It looks like you're trying to commit omnicide. Would you like some help?&quot;"></p>
-<p>While most AI researchers <em>do</em> believe advanced AI poses a 5+% risk of &quot;literally everybody dies&quot;<sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup>, it's <em>very</em> hard to convince folks (especially policymakers) of stuff that's never happened before.</p>
+<p>While most AI researchers <em>do</em> believe advanced AI poses a 5+% risk of &quot;literally everybody dies&quot;<sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup>, it's <em>very</em> hard to convince folks (especially policymakers) of stuff that's never happened before.</p>
 <p>So instead, I'd like to highlight the ways that advanced AI – (especially when it's available to anyone with a high-end computer) – could lead to catastrophes, &quot;merely&quot; by scaling up <em>already-existing</em> bad stuff.</p>
 <p>For example:</p>
 <ul>
-<li><u>Bio-engineered pandemics</u>: A bio-terrorist cult (like Aum Shinrikyo<sup class="footnote-ref"><a href="#fn18" id="fnref18:1">[18:1]</a></sup>) uses AI (like AlphaFold<sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup>) and DNA-printing (which is getting cheaper <em>fast</em><sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup>) to design multiple new super-viruses, and release them simultaneously in major airports around the globe.
+<li><u>Bio-engineered pandemics</u>: A bio-terrorist cult (like Aum Shinrikyo<sup class="footnote-ref"><a href="#fn19" id="fnref19:1">[19:1]</a></sup>) uses AI (like AlphaFold<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup>) and DNA-printing (which is getting cheaper <em>fast</em><sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup>) to design multiple new super-viruses, and release them simultaneously in major airports around the globe.
 <ul>
-<li>(Proof of concept: Scientists have <em>already</em> re-built polio from mail-order DNA... two decades ago.<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup>)</li>
+<li>(Proof of concept: Scientists have <em>already</em> re-built polio from mail-order DNA... two decades ago.<sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup>)</li>
 </ul>
 </li>
 <li><u>Digital authoritarianism</u>: A tyrant uses AI-enhanced surveillance to hunt down protestors (<a href="https://www.reuters.com/article/us-russia-politics-navalny-tech-idUSKBN2AB1U2/">already happening</a>), generate individually-targeted propaganda (<a href="https://www.technologyreview.com/2023/10/04/1080801/generative-ai-boosting-disinformation-and-propaganda-freedom-house/">kind of happening</a>), and autonomous military robots (<a href="https://theconversation.com/us-military-plans-to-unleash-thousands-of-autonomous-war-robots-over-next-two-years-212444">soon-to-be happening</a>)... all to rule with a silicon fist.</li>
 <li><u>Cybersecurity Ransom Hell</u>: Cyber-criminals make a computer virus that <em>does its own hacking &amp; re-programming</em>, so it's always one step ahead of human defenses. The result: an unstoppable worldwide bot-net, which holds critical infrastructure ransom, and manipulates top CEOs and politicians to do its bidding.
 <ul>
-<li>(For context: <em>without</em> AI, hackers have already damaged nuclear power plants,<sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup> held hospitals ransom<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup> which maybe killed someone,<sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup> and almost poisoned a town's water supply <em>twice</em>.<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup> <em>With</em> AI, deepfakes have been used to swing an election,<sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup> steal $25 million in a single heist,<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup> and target parents for ransom, using the faked voices of their children being kidnapped &amp; crying for help.<sup class="footnote-ref"><a href="#fn29" id="fnref29">[29]</a></sup>)</li>
+<li>(For context: <em>without</em> AI, hackers have already damaged nuclear power plants,<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup> held hospitals ransom<sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup> which maybe killed someone,<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup> and almost poisoned a town's water supply <em>twice</em>.<sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup> <em>With</em> AI, deepfakes have been used to swing an election,<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup> steal $25 million in a single heist,<sup class="footnote-ref"><a href="#fn29" id="fnref29">[29]</a></sup> and target parents for ransom, using the faked voices of their children being kidnapped &amp; crying for help.<sup class="footnote-ref"><a href="#fn30" id="fnref30">[30]</a></sup>)</li>
 <li>(This is why it's not easy to &quot;just shut down an AI when we notice it going haywire&quot;; as the history of computer security shows, we just <em>suck</em> at noticing problems in general. <a href="#xz">:I cannot over-emphasize how much the modern world is built on an upside-down house of cards.</a>)</li>
+<li>(<strong>update dec 2025:</strong> a few months ago, researchers found <a href="https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf">the world's first confirmed case</a> of &quot;agentic AI successfully obtaining access to confirmed high-value targets for intelligence collection, including major technology corporations and government agencies&quot;. It's happening!!)</li>
 </ul>
 </li>
 </ul>
@@ -416,19 +417,19 @@
 <p>On the flipside...</p>
 <h3>4) <em>Yes</em>, folks worried about AI's downsides <em>do</em> recognize its upsides.</h3>
 <p><img src="media/intro/parachute.png" alt="Comic. Sheriff Meowdy holds up a blueprint for a parachute design. Ham the Human retorts, annoyed: “Why are you so anti-aviation?”"></p>
-<p>AI Risk folks aren't Luddites. In fact, they warn about AI's downsides <em>precisely because</em> they care about AI's upsides.<sup class="footnote-ref"><a href="#fn30" id="fnref30">[30]</a></sup> As humorist Gil Stern once said:<sup class="footnote-ref"><a href="#fn31" id="fnref31">[31]</a></sup></p>
+<p>AI Risk folks aren't Luddites. In fact, they warn about AI's downsides <em>precisely because</em> they care about AI's upsides.<sup class="footnote-ref"><a href="#fn31" id="fnref31">[31]</a></sup> As humorist Gil Stern once said:<sup class="footnote-ref"><a href="#fn32" id="fnref32">[32]</a></sup></p>
 <blockquote>
 <p>“Both the optimist and the pessimist contribute to society: the optimist invents the airplane, and the pessimist invents the parachute.”</p>
 </blockquote>
 <p>So: even as this series goes into detail on how AI <em>is already</em> going wrong, it's worth remembering the few ways AI <em>is already</em> going right:</p>
 <ul>
-<li>AI can analyze medical scans <em>as well or better than human specialists!</em> <sup class="footnote-ref"><a href="#fn32" id="fnref32">[32]</a></sup> That's concretely life-saving!</li>
-<li>AlphaFold basically <em>solved</em> a 50-year-old, major problem in biology: how to predict the shape of proteins.<sup class="footnote-ref"><a href="#fn20" id="fnref20:1">[20:1]</a></sup> (AlphaFold can predict a protein's shape to within <em>the width of an atom</em>!) This has huge applications to medicine &amp; understanding disease.</li>
+<li>AI can analyze medical scans <em>as well or better than human specialists!</em> <sup class="footnote-ref"><a href="#fn33" id="fnref33">[33]</a></sup> That's concretely life-saving!</li>
+<li>AlphaFold basically <em>solved</em> a 50-year-old, major problem in biology: how to predict the shape of proteins.<sup class="footnote-ref"><a href="#fn21" id="fnref21:1">[21:1]</a></sup> (AlphaFold can predict a protein's shape to within <em>the width of an atom</em>!) This has huge applications to medicine &amp; understanding disease.</li>
 </ul>
 <p>Too often, we take technology — even life-saving technology — for granted. So, let me zoom out for context. Here's the last 2000+ years of child mortality, the percentage of kids who die before puberty:</p>
 <p><img src="media/intro/owid.jpg" alt="Chart of child mortality over the last 2000+ years. Worldwide, it was constant at around 48%, from hunter-gatherer times to 1800. Then suddenly, starting 1800, it plummets to 4.3% today."><em>(from <a href="https://ourworldindata.org/child-mortality">Dattani, Spooner, Ritchie and Roser (2023)</a>)</em></p>
-<p>For <em>thousands</em> of years, in nations both rich and poor, a full <em>half</em> of kids just died. This was a constant. Then, starting in the 1800s — thanks to science/tech like germ theory, sanitation, medicine, clean water, vaccines, etc — child mortality fell off like a cliff. We still have far more to go — I refuse to accept<sup class="footnote-ref"><a href="#fn33" id="fnref33">[33]</a></sup> a worldwide 4.3% (1 in 23) child death rate — but let's just appreciate how humanity <em>so swiftly cut down</em> an <em>eons-old</em> scourge.</p>
-<p>How did we achieve this? Policy's a big part of the story, but policy is &quot;the art of the possible&quot;<sup class="footnote-ref"><a href="#fn34" id="fnref34">[34]</a></sup>, and the above wouldn't have been possible without <em>good</em> science &amp; tech. If safe, humane AI can help us progress further by even just a few percent — towards slaying the remaining dragons of cancer, Alzheimer's, HIV/AIDS, etc — that'd be tens of millions more of our loved ones, who get to beat the Reaper for another day.</p>
+<p>For <em>thousands</em> of years, in nations both rich and poor, a full <em>half</em> of kids just died. This was a constant. Then, starting in the 1800s — thanks to science/tech like germ theory, sanitation, medicine, clean water, vaccines, etc — child mortality fell off like a cliff. We still have far more to go — I refuse to accept<sup class="footnote-ref"><a href="#fn34" id="fnref34">[34]</a></sup> a worldwide 4.3% (1 in 23) child death rate — but let's just appreciate how humanity <em>so swiftly cut down</em> an <em>eons-old</em> scourge.</p>
+<p>How did we achieve this? Policy's a big part of the story, but policy is &quot;the art of the possible&quot;<sup class="footnote-ref"><a href="#fn35" id="fnref35">[35]</a></sup>, and the above wouldn't have been possible without <em>good</em> science &amp; tech. If safe, humane AI can help us progress further by even just a few percent — towards slaying the remaining dragons of cancer, Alzheimer's, HIV/AIDS, etc — that'd be tens of millions more of our loved ones, who get to beat the Reaper for another day.</p>
 <p>F#@☆ going to Mars, <em>that's</em> why advanced AI matters.</p>
 <p>. . .</p>
 <p>Wait, <em>really?</em> Toys like ChatGPT and DALL-E are <em>life-and-death</em> stakes? That leads us to the final misconception I'd like to address:</p>
@@ -439,8 +440,8 @@
 <p>This is how I feel about &quot;don't worry about AI, it can't even do [X]&quot;.</p>
 <p>Is our postmodern memory-span <em>that</em> bad? <em>One</em> decade ago, just <em>one</em>, the world's state-of-the-art AIs couldn't reliably <em>recognize pictures of cats.</em> Now, not <em>only</em> can AI do that at human-performance level, AIs can pump out <a href="#CatNinja">:a picture of a cat-ninja slicing a watermelon in the style of Vincent Van Gogh</a> in <em>under a minute</em>.</p>
 <p>Is <em>current</em> AI a huge threat to our jobs, or safety? No. (Well, besides the aforementioned deepfake scams.)</p>
-<p>But: if AI keeps improving at a similar rate as it has for the last decade... it seems plausible to me we could get &quot;Einstein/Oppenheimer-level&quot; AI in 30 years.<sup class="footnote-ref"><a href="#fn35" id="fnref35">[35]</a></sup> That's well within many folks' lifetimes!</p>
-<p>As &quot;they&quot; say:<sup class="footnote-ref"><a href="#fn36" id="fnref36">[36]</a></sup></p>
+<p>But: if AI keeps improving at a similar rate as it has for the last decade... it seems plausible to me we could get &quot;Einstein/Oppenheimer-level&quot; AI in 30 years.<sup class="footnote-ref"><a href="#fn36" id="fnref36">[36]</a></sup><sup class="footnote-ref"><a href="#fn37" id="fnref37">[37]</a></sup> That's well within many folks' lifetimes!</p>
+<p>As &quot;they&quot; say:<sup class="footnote-ref"><a href="#fn38" id="fnref38">[38]</a></sup></p>
 <blockquote>
 <p>The best time to plant a tree was 30 years ago. The second best time is today.</p>
 </blockquote>
@@ -506,8 +507,10 @@
 <p><a
      href="p1" 
     
+    
+    
     target="_self">
-<div id="next_button" >
+<div id="next_button">
     <div id="nb--crt_lines"></div>
     <div id="nb--static"></div>
     <div id="nb--words">
@@ -520,6 +523,8 @@
 </p>
 <h4>:x Four Objects</h4>
 <p>Oi! Sempre que eu tiver uma tangente que não se encaixa no fluxo principal, irei coloca-la em uma seção &quot;expansível&quot; como esta!(Serão links com sublinhado <em>pontilhado</em>, não sublinhado contínuo.)</p>
+<p>~ ~ ~</p>
+<p><strong>ATUALIZAÇÃO: Esta seção foi escrito originalmente em maio de 2024. 1 ano e meio depois, em decembro de 2025, isso é <em>falso agora</em>. Olha o fim dessa seção para ver mais detalhes.</strong></p>
 <p>Enfim, aqui está um prompt para desenhar quatro objetos:</p>
 <blockquote>
 <p>“Uma pirâmide amarela entre uma esfera vermelha e um cilindro verde, tudo em cima de um grande cubo azul.”</p>
@@ -649,43 +654,47 @@
 </li>
 <li id="fn17" class="footnote-item"><p>Melanie Mitchell &amp; Yann LeCun assumiram o lado &quot;cético&quot; <a href="https://thehub.ca/2023-07-04/is-ai-an-existential-threat-yann-lecun-max-tegmark-melanie-mitchell-and-yoshua-bengio-make-their-case/">em um debate público realizado em 2023 sobre &quot;A IA é uma Ameaça Existencial?&quot;</a> O lado &quot;preocupado&quot; foi representado por Yoshua Bengio e pelo físico-filósofo Max Tegmark. <a href="#fnref17" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn18" class="footnote-item"><p>A Japanese cult that attacked people with chemical &amp; biological weapons. Most infamously, in 1995, they released nerve gas on the Tokyo Metro, injuring 1,050 people &amp; killing 14 people. (<a href="https://en.wikipedia.org/wiki/Tokyo_subway_sarin_attack">Wikipedia</a>) <a href="#fnref18" class="footnote-backref">↩︎</a> <a href="#fnref18:1" class="footnote-backref">↩︎</a></p>
+<li id="fn18" class="footnote-item"><p>Melanie Mitchell &amp; Yann LeCun took the &quot;skeptic&quot; side of <a href="https://thehub.ca/2023-07-04/is-ai-an-existential-threat-yann-lecun-max-tegmark-melanie-mitchell-and-yoshua-bengio-make-their-case/">a 2023 public debate on &quot;Is AI an Existential Threat?&quot;</a> The &quot;concerned&quot; side was taken up by Yoshua Bengio and physicist-philosopher Max Tegmark. <a href="#fnref18" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn19" class="footnote-item"><p>Layperson-friendly summary of a recent survey of 2,778 AI researchers: <a href="https://www.vox.com/future-perfect/2024/1/10/24032987/ai-impacts-survey-artificial-intelligence-chatgpt-openai-existential-risk-superintelligence">Kelsey Piper (2024) for <em>Vox</em></a> See original report here: <a href="https://aiimpacts.org/wp-content/uploads/2023/04/Thousands_of_AI_authors_on_the_future_of_AI.pdf">Grace et al 2024</a>. Keep in mind, as the paper notes itself, of this big caveat: <em>“Forecasting is difficult in general, and subject-matter experts have been observed to perform poorly. Our participants’ expertise is in AI, and they do not, to our knowledge, have any unusual skill at forecasting in general.”</em> <a href="#fnref19" class="footnote-backref">↩︎</a></p>
+<li id="fn19" class="footnote-item"><p>A Japanese cult that attacked people with chemical &amp; biological weapons. Most infamously, in 1995, they released nerve gas on the Tokyo Metro, injuring 1,050 people &amp; killing 14 people. (<a href="https://en.wikipedia.org/wiki/Tokyo_subway_sarin_attack">Wikipedia</a>) <a href="#fnref19" class="footnote-backref">↩︎</a> <a href="#fnref19:1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn20" class="footnote-item"><p>Layperson explanation of AlphaFold: <a href="https://web.archive.org/web/20231204110638/https://www.technologyreview.com/2020/11/30/1012712/deepmind-protein-folding-ai-solved-biology-science-drugs-disease/">Heaven, 2020 for <em>MIT Technology Review</em></a>. Or, <a href="https://en.wikipedia.org/wiki/AlphaFold">its Wikipedia article</a>. <a href="#fnref20" class="footnote-backref">↩︎</a> <a href="#fnref20:1" class="footnote-backref">↩︎</a></p>
+<li id="fn20" class="footnote-item"><p>Layperson-friendly summary of a recent survey of 2,778 AI researchers: <a href="https://www.vox.com/future-perfect/2024/1/10/24032987/ai-impacts-survey-artificial-intelligence-chatgpt-openai-existential-risk-superintelligence">Kelsey Piper (2024) for <em>Vox</em></a> See original report here: <a href="https://aiimpacts.org/wp-content/uploads/2023/04/Thousands_of_AI_authors_on_the_future_of_AI.pdf">Grace et al 2024</a>. Keep in mind, as the paper notes itself, of this big caveat: <em>“Forecasting is difficult in general, and subject-matter experts have been observed to perform poorly. Our participants’ expertise is in AI, and they do not, to our knowledge, have any unusual skill at forecasting in general.”</em> <a href="#fnref20" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn21" class="footnote-item"><p>As of writing, commercial rates for DNA synthesis cost ~$0.10 USD per &quot;base pair&quot; of DNA. For context, poliovirus DNA is ~7,700 base pairs long, meaning <em>printing polio</em> would only cost ~$770. <a href="#fnref21" class="footnote-backref">↩︎</a></p>
+<li id="fn21" class="footnote-item"><p>Layperson explanation of AlphaFold: <a href="https://web.archive.org/web/20231204110638/https://www.technologyreview.com/2020/11/30/1012712/deepmind-protein-folding-ai-solved-biology-science-drugs-disease/">Heaven, 2020 for <em>MIT Technology Review</em></a>. Or, <a href="https://en.wikipedia.org/wiki/AlphaFold">its Wikipedia article</a>. <a href="#fnref21" class="footnote-backref">↩︎</a> <a href="#fnref21:1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn22" class="footnote-item"><p><a href="https://www.science.org/content/article/poliovirus-baked-scratch">Jennifer Couzin-Frankel (2002) for <em>Science</em></a> <a href="#fnref22" class="footnote-backref">↩︎</a></p>
+<li id="fn22" class="footnote-item"><p>As of writing, commercial rates for DNA synthesis cost ~$0.10 USD per &quot;base pair&quot; of DNA. For context, poliovirus DNA is ~7,700 base pairs long, meaning <em>printing polio</em> would only cost ~$770. <a href="#fnref22" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn23" class="footnote-item"><p><a href="https://en.wikipedia.org/wiki/Stuxnet">Stuxnet</a> was a computer virus designed by the US and Israel, which targeted &amp; damaged Iranian nuclear power plants. It's estimated Stuxnet broke ~20% of Iran's centrifuges! <a href="#fnref23" class="footnote-backref">↩︎</a></p>
+<li id="fn23" class="footnote-item"><p><a href="https://www.science.org/content/article/poliovirus-baked-scratch">Jennifer Couzin-Frankel (2002) for <em>Science</em></a> <a href="#fnref23" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn24" class="footnote-item"><p>In 2017, <a href="https://en.wikipedia.org/wiki/WannaCry_ransomware_attack">the WannaCry ransomware attack</a> hit ~300,000 computers around the world, including UK hospitals. In Oct 2020, during a Covid-19 spike, ransomware attacks hit dozens of US hospitals. (<a href="https://www.wired.com/story/ransomware-hospitals-ryuk-trickbot/">Newman, 2020 for <em>Wired</em></a>) <a href="#fnref24" class="footnote-backref">↩︎</a></p>
+<li id="fn24" class="footnote-item"><p><a href="https://en.wikipedia.org/wiki/Stuxnet">Stuxnet</a> was a computer virus designed by the US and Israel, which targeted &amp; damaged Iranian nuclear power plants. It's estimated Stuxnet broke ~20% of Iran's centrifuges! <a href="#fnref24" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn25" class="footnote-item"><p>In Sep 2020, a woman was turned away from a hospital, due to it being under attack by a ransomware virus. The woman died. <a href="https://www.zdnet.com/article/first-death-reported-following-a-ransomware-attack-on-a-german-hospital/">Cimpanu (2020) for <em>ZDNet</em></a>. (However, there were &quot;insufficient grounds&quot; to legally charge the hackers for <em>directly</em> causing her death. <a href="https://www.wired.co.uk/article/ransomware-hospital-death-germany">Ralston, 2020 for <em>Wired</em></a>) <a href="#fnref25" class="footnote-backref">↩︎</a></p>
+<li id="fn25" class="footnote-item"><p>In 2017, <a href="https://en.wikipedia.org/wiki/WannaCry_ransomware_attack">the WannaCry ransomware attack</a> hit ~300,000 computers around the world, including UK hospitals. In Oct 2020, during a Covid-19 spike, ransomware attacks hit dozens of US hospitals. (<a href="https://www.wired.com/story/ransomware-hospitals-ryuk-trickbot/">Newman, 2020 for <em>Wired</em></a>) <a href="#fnref25" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn26" class="footnote-item"><p>In Jan 2021, a Bay Area water treatment plant was hacked, and had its treatment programs deleted. (<a href="https://www.nbcnews.com/tech/security/hacker-tried-poison-calif-water-supply-was-easy-entering-password-rcna1206">Collier, 2021 for <em>NBC News</em></a>) In Feb 2021, a Florida town's water treatment plant was hacked to add dangerous amounts of lye to the water supply. (<a href="https://apnews.com/article/hacker-tried-poison-water-florida-ab175add0454bcb914c0eb3fb9588466">Bajak, 2021 for <em>AP News</em></a>) <a href="#fnref26" class="footnote-backref">↩︎</a></p>
+<li id="fn26" class="footnote-item"><p>In Sep 2020, a woman was turned away from a hospital, due to it being under attack by a ransomware virus. The woman died. <a href="https://www.zdnet.com/article/first-death-reported-following-a-ransomware-attack-on-a-german-hospital/">Cimpanu (2020) for <em>ZDNet</em></a>. (However, there were &quot;insufficient grounds&quot; to legally charge the hackers for <em>directly</em> causing her death. <a href="https://www.wired.co.uk/article/ransomware-hospital-death-germany">Ralston, 2020 for <em>Wired</em></a>) <a href="#fnref26" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn27" class="footnote-item"><p><a href="https://web.archive.org/web/20231102183904/https://www.wired.com/story/slovakias-election-deepfakes-show-ai-is-a-danger-to-democracy/">Meaker (2023) for <em>Wired</em></a> <a href="#fnref27" class="footnote-backref">↩︎</a></p>
+<li id="fn27" class="footnote-item"><p>In Jan 2021, a Bay Area water treatment plant was hacked, and had its treatment programs deleted. (<a href="https://www.nbcnews.com/tech/security/hacker-tried-poison-calif-water-supply-was-easy-entering-password-rcna1206">Collier, 2021 for <em>NBC News</em></a>) In Feb 2021, a Florida town's water treatment plant was hacked to add dangerous amounts of lye to the water supply. (<a href="https://apnews.com/article/hacker-tried-poison-water-florida-ab175add0454bcb914c0eb3fb9588466">Bajak, 2021 for <em>AP News</em></a>) <a href="#fnref27" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn28" class="footnote-item"><p>Benj Edwards, <a href="https://arstechnica.com/information-technology/2024/02/deepfake-scammer-walks-off-with-25-million-in-first-of-its-kind-ai-heist/">&quot;Deepfake scammer walks off with $25 million in first-of-its-kind AI heist&quot;</a>, <em>Ars Technica</em>, 2024 Feb 5. <a href="#fnref28" class="footnote-backref">↩︎</a></p>
+<li id="fn28" class="footnote-item"><p><a href="https://web.archive.org/web/20231102183904/https://www.wired.com/story/slovakias-election-deepfakes-show-ai-is-a-danger-to-democracy/">Meaker (2023) for <em>Wired</em></a> <a href="#fnref28" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn29" class="footnote-item"><p>“It was completely her voice. It was her inflection. It was the way [my daughter] would have cried.” [...] “Now there are ways in which you can [deepfake voices] with just three seconds of your voice.” (<a href="https://www.azfamily.com/2023/04/10/ive-got-your-daughter-scottsdale-mom-warns-close-encounter-with-ai-voice-cloning-scam/">Campbell, 2023 for local news outlet <em>Arizona's Family</em></a>. CONTENT NOTE: threats of sexual assault.) <a href="#fnref29" class="footnote-backref">↩︎</a></p>
+<li id="fn29" class="footnote-item"><p>Benj Edwards, <a href="https://arstechnica.com/information-technology/2024/02/deepfake-scammer-walks-off-with-25-million-in-first-of-its-kind-ai-heist/">&quot;Deepfake scammer walks off with $25 million in first-of-its-kind AI heist&quot;</a>, <em>Ars Technica</em>, 2024 Feb 5. <a href="#fnref29" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn30" class="footnote-item"><p>“[T]he dubious argument that “doom-and-gloom predictions often fail to consider the potential benefits of AI in preventing medical errors, reducing car accidents, and more.” [... is] like arguing that nuclear engineers who analyze the possibility of meltdowns in nuclear power stations are “failing to consider the potential benefits” of cheap electricity, and that because nuclear power stations might one day generate really cheap electricity, we should neither mention, nor work on preventing, the possibility of a meltdown.” Source: <a href="https://www.technologyreview.com/2016/11/02/156285/yes-we-are-worried-about-the-existential-risk-of-artificial-intelligence/">Dafoe &amp; Russell (2016) for <em>MIT Technology Review</em></a>. <a href="#fnref30" class="footnote-backref">↩︎</a></p>
+<li id="fn30" class="footnote-item"><p>“It was completely her voice. It was her inflection. It was the way [my daughter] would have cried.” [...] “Now there are ways in which you can [deepfake voices] with just three seconds of your voice.” (<a href="https://www.azfamily.com/2023/04/10/ive-got-your-daughter-scottsdale-mom-warns-close-encounter-with-ai-voice-cloning-scam/">Campbell, 2023 for local news outlet <em>Arizona's Family</em></a>. CONTENT NOTE: threats of sexual assault.) <a href="#fnref30" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn31" class="footnote-item"><p><a href="https://quoteinvestigator.com/2021/05/27/parachute/">Quote Investigator (2021)</a> <a href="#fnref31" class="footnote-backref">↩︎</a></p>
+<li id="fn31" class="footnote-item"><p>“[T]he dubious argument that “doom-and-gloom predictions often fail to consider the potential benefits of AI in preventing medical errors, reducing car accidents, and more.” [... is] like arguing that nuclear engineers who analyze the possibility of meltdowns in nuclear power stations are “failing to consider the potential benefits” of cheap electricity, and that because nuclear power stations might one day generate really cheap electricity, we should neither mention, nor work on preventing, the possibility of a meltdown.” Source: <a href="https://www.technologyreview.com/2016/11/02/156285/yes-we-are-worried-about-the-existential-risk-of-artificial-intelligence/">Dafoe &amp; Russell (2016) for <em>MIT Technology Review</em></a>. <a href="#fnref31" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn32" class="footnote-item"><p><a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2819%2930123-2/fulltext#%20">Liu &amp; Faes et al., 2019</a>: “Our review found the diagnostic performance of deep learning models to be <strong>equivalent to that of health-care professionals</strong>.” [emphasis added] AI vs Human expert &quot;true-positive&quot; rate: 87.0% vs 86.4%. AI vs Human expert &quot;true-negative&quot; rate: 92.5% vs 90.5%. <a href="#fnref32" class="footnote-backref">↩︎</a></p>
+<li id="fn32" class="footnote-item"><p><a href="https://quoteinvestigator.com/2021/05/27/parachute/">Quote Investigator (2021)</a> <a href="#fnref32" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn33" class="footnote-item"><p>One of my all-time favorite quotes: <a href="https://ourworldindata.org/much-better-awful-can-be-better">“The world is awful. The world is much better. The world <em>can be</em> much better. <em>All three statements are true at the same time.</em>”</a> <a href="#fnref33" class="footnote-backref">↩︎</a></p>
+<li id="fn33" class="footnote-item"><p><a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2819%2930123-2/fulltext#%20">Liu &amp; Faes et al., 2019</a>: “Our review found the diagnostic performance of deep learning models to be <strong>equivalent to that of health-care professionals</strong>.” [emphasis added] AI vs Human expert &quot;true-positive&quot; rate: 87.0% vs 86.4%. AI vs Human expert &quot;true-negative&quot; rate: 92.5% vs 90.5%. <a href="#fnref33" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn34" class="footnote-item"><p>Quote from Otto von Bismarck, the first German chancellor: <em>“Die Politik ist die Lehre vom Möglichen.”</em> (“Politics is the art of the possible.”) <a href="#fnref34" class="footnote-backref">↩︎</a></p>
+<li id="fn34" class="footnote-item"><p>One of my all-time favorite quotes: <a href="https://ourworldindata.org/much-better-awful-can-be-better">“The world is awful. The world is much better. The world <em>can be</em> much better. <em>All three statements are true at the same time.</em>”</a> <a href="#fnref34" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn35" class="footnote-item"><p>Estimate derived via &quot;numerical posterior extraction&quot;. In other words, I pulled a number out my-- <a href="#fnref35" class="footnote-backref">↩︎</a></p>
+<li id="fn35" class="footnote-item"><p>Quote from Otto von Bismarck, the first German chancellor: <em>“Die Politik ist die Lehre vom Möglichen.”</em> (“Politics is the art of the possible.”) <a href="#fnref35" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn36" class="footnote-item"><p>Quote source: <a href="https://en.wikiquote.org/wiki/Trees#Planting">nobody knows lol.</a> <a href="#fnref36" class="footnote-backref">↩︎</a></p>
+<li id="fn36" class="footnote-item"><p>Estimate derived via &quot;numerical posterior extraction&quot;. In other words, I pulled a number out my-- <a href="#fnref36" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn37" class="footnote-item"><p>Okay but more seriously: the best forecasters estimate human-level &quot;artificial general intelligence&quot; <a href="https://www.metaculus.com/questions/5121/date-of-general-ai/">by 2033, a bit under a decade</a>, and &quot;transformative AI&quot; whose impact is on par as the Industrial Revolution <a href="https://www.metaculus.com/questions/19356/transformative-ai-date/">by 2044, a bit under two decades</a>. I'm personally more pessimistic than that, but I'd be <em>shocked</em> if we don't get Einstein-level AIs by 2060. <a href="#fnref37" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn38" class="footnote-item"><p>Quote source: <a href="https://en.wikiquote.org/wiki/Trees#Planting">nobody knows lol.</a> <a href="#fnref38" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -693,6 +702,7 @@
 	</article>
 
     <!-- FOOTER -->
+    
 	<div id="footer">
         <div id="footer_content">
 <p style="font-size: 1.3em; line-height: 1.35em;">
@@ -838,10 +848,13 @@ Thank you for being the kind of person to read the credits~ 🙏
 </p>
         </div>
 	</div>
+    
     <div id="post_credits">
+        
         <p>
             Oh dang, it's a post-credits scene:
         </p>
+        
 <p>
     <a href="#AllFeetnotes">: See all feetnotes 👣</a>
 </p>

@@ -42,6 +42,17 @@
     <script src="{{root}}scripts/nutshell-v1.0.5.js"></script>
     <script> Nutshell.setOptions({ startOnLoad: false, /* Start AFTER footnotes loaded */ }); </script>
     <!-- MathJAX: for nice math -->
+    {% if isPartThree %}
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)'], ['$', '$']],
+            displayMath: [['\\[', '\\]'], ['$$', '$$']],
+            processEscapes: true
+        }
+    };
+    </script>
+    {% endif %}
     <script src="{{root}}scripts/tex-mml-chtml.js"></script>
 	<!-- This website's own scripts -->
     <script src="{{root}}scripts/page.js"></script>
@@ -123,6 +134,9 @@
             {% endif %}
             {% if isPartTwo %}
             <img id="p2-banner" src="../media/p2/P2Cat.png"/>
+            {% endif %}
+            {% if isPartThree %}
+            <img id="p3-banner" src="../media/p3/P3Cat.png"/>
             {% endif %}
 
             <div id="crt_lines"></div>
@@ -222,10 +236,9 @@
                     </span>
                 </div>
             </a>
-            <a target="_self" href="#"
-                title="COMING MID-DECEMBER 2024, probably"
-                onclick="alert('COMING MID-DECEMBER 2024, probably')">
-                <div>
+            <a target="_self" href="{{root}}p3"
+                class="live">
+                <div {{ 'selected' if isPartThree }} >
                     <span class='chapter-nav-desktop'>
                         part 3<br>solutions?
                     </span>
@@ -234,9 +247,8 @@
                     </span>
                 </div>
             </a>
-            <a target="_self" href="#"
-                title="COMING MID-DECEMBER 2024, probably"
-                onclick="alert('COMING MID-DECEMBER 2024, probably')">
+            <a target="_self" href="{{root}}conclusion"
+                class="live">
                 <div style="border-right:1px solid rgba(128,128,128,0.8);">
                     <span class='chapter-nav-desktop'>
                         conclusion
@@ -274,15 +286,19 @@
 	</article>
 
     <!-- FOOTER -->
+    {% if not isPartThree %}
 	<div id="footer">
         <div id="footer_content">
 {% include 'templates/footer.html' %}
         </div>
 	</div>
+    {% endif %}
     <div id="post_credits">
+        {% if not isPartThree %}
         <p>
             Oh dang, it's a post-credits scene:
         </p>
+        {% endif %}
 <p>
     <a href="#AllFeetnotes">: See all feetnotes 👣</a>
 </p>
@@ -326,6 +342,30 @@
     <a href="#TradingWithAdvancedAIs">: Could humans trade with super-human AIs?</a>
     <br>
     <a href="#Axiom">: What's an "axiom"?</a>
+</p>
+{% elif isPartThree %}
+<p>
+    <a href="#SwissCheese">: More about the Swiss Cheese Model</a>
+    <br>
+    <a href="#RobustChainMath">: The math of robust scalable oversight</a>
+    <br>
+    <a href="#ScalableOversightExtras">: Scalable Oversight, extra notes</a>
+    <br>
+    <a href="#IDA">: Iterated Distillation & Amplification, explained</a>
+    <br>
+    <a href="#CriticalMassComic">: (deleted scene) "Critical Mass" Comic</a>
+    <br>
+    <a href="#FutureLivesFixes">: Fixes for the "Future Lives" Algorithm</a>
+    <br>
+    <a href="#AISelfMod">: Informal literature review of "Self-modifying Agents"</a>
+    <br>
+    <a href="#WorstOrAverage">: Pros & Cons of Worst/Average/Best-Case optimization</a>
+    <br>
+    <a href="#LearnValuesExtraNotes">: Learning our values, extra notes</a>
+    <br>
+    <a href="#EconomicsAI">: Economics of AI</a>
+    <br>
+    <a href="#HumanLLMAdvantages">: Advantages of Humans vs LLMs</a>
 </p>
 {% endif %}
     </div>
